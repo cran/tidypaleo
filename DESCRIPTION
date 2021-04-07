@@ -1,6 +1,6 @@
 Package: tidypaleo
 Title: Tidy Tools for Paleoenvironmental Archives
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Dewey", "Dunnington", 
                   email = "dewey@fishandwhistle.net", 
                   role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0002-9415-4582"))
@@ -25,9 +25,9 @@ Imports: rlang, tidyselect, dplyr, vctrs, tibble, scales, ggplot2 (>=
         1.0.2), digest, rioja
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-03-29 16:14:04 UTC; dewey
+Packaged: 2021-04-07 12:43:08 UTC; dewey
 Author: Dewey Dunnington [aut, cre, cph]
     (<https://orcid.org/0000-0002-9415-4582>)
 Maintainer: Dewey Dunnington <dewey@fishandwhistle.net>
 Repository: CRAN
-Date/Publication: 2021-03-31 08:50:03 UTC
+Date/Publication: 2021-04-07 13:10:03 UTC

@@ -1,6 +1,7 @@
-34c679376d78ca31a13d59edbf7ae2cd *DESCRIPTION
+36b653652d5b10ca8193b076f04924a0 *DESCRIPTION
 146bfbbc4cdca377dc2a5f4a6e920c8d *LICENSE
 19924755b69e624c280b9720c2ce92a7 *NAMESPACE
+3c6f8fc033f3565456d1d9409e43a3e8 *NEWS.md
 af65eb88552fff0b67eca9deac79727a *R/age_depth_model.R
 13545eccf6d8503ffe5e947f92109025 *R/data.R
 26431bfb54ff72f890ac6e1c642f8ea4 *R/data_eval.R
@@ -15,8 +16,8 @@ b3e2874ea8cd5f13a7fed1c836f4ef76 *R/nested_data_matrix.R
 81c3bb286acba5f52b452d637e789e1b *R/nested_prcomp.R
 e0ef681901465d24f47f9139cb2c086a *R/tidypaleo-package.R
 2335e94ff35c661035cc990f79ceb949 *R/zzz.R
-102c165b237d0c3887ed1909a7c59245 *README.md
-ab1186e87705ae0a7fea4febb7746a84 *build/partial.rdb
+d3a77cd9ba8dfe5faef6b22377d36dd2 *README.md
+030c8cfa88a79a09fe1135785d91be08 *build/partial.rdb
 b21317f6c598d6ca52707645a0a5596d *build/vignette.rds
 a60c98506c22cb60d29b592d239c8788 *data/alta_lake_14C_ages.rda
 9893d730ce9ed7f938af7359f5e7c8ff *data/alta_lake_210Pb_ages.rda
@@ -32,13 +33,13 @@ dec2180d4d76f4e3d8edc96f5aa597f5 *data/long_lake_bacon_ages.rda
 e013913fecef1bb7ba2e101e7514806c *data/long_lake_plottable.rda
 e1a1a83f76cb80dbb815008d2ea17478 *inst/doc/age_depth.R
 94e4a9a9f5c75501a4422d799dcb534f *inst/doc/age_depth.Rmd
-94ba44431f508fd33914f12442d6e593 *inst/doc/age_depth.html
+ec85da22c9ee4bc3453fcc68d5bd3b1d *inst/doc/age_depth.html
 4f3aabe84d9676ae05b792638c658003 *inst/doc/nested_analysis.R
 8447a16e32502e37d25e9bcb6167fda0 *inst/doc/nested_analysis.Rmd
-7c2c596276f30e03a4008085122f7181 *inst/doc/nested_analysis.html
+299a912f50aebac05d95a55bf691d075 *inst/doc/nested_analysis.html
 3f9f3bb9577b43c74366d6ecfbf190eb *inst/doc/strat_diagrams.R
 7562648f5f0cd5c696a39f99c0ada61b *inst/doc/strat_diagrams.Rmd
-180ad8ece407211f2f8148ebca61fd4b *inst/doc/strat_diagrams.html
+8028767ff0a996045b96581ad1344e7e *inst/doc/strat_diagrams.html
 78789f0a79ea38e4c8502137e3270da2 *man/age_depth_as_sec_axis.Rd
 6d2782343b6e1e3a0586da9a452f4ebc *man/age_depth_interpolate.Rd
 169f6c6a61ae5a02b0c2f1b21dbac906 *man/age_depth_model.Rd
@@ -134,7 +135,7 @@ f790482e87c4061f70b5a3e51a8b567d *tests/figs/test-nested-chclust-coniss-r/nested
 bdb6da751b02e6219fc5dbbbc89957dc *tests/figs/test-nested-chclust-coniss-r/stat-nested-hclust-y.svg
 5176724892edd8dd00b70d42635586fa *tests/testthat.R
 89254e0413ecb11b19a798c8b0c62249 *tests/testthat/Rplots.pdf
-28db9e9e2aa4fab23703b80ebc5eb1c0 *tests/testthat/test-age_depth_model.R
+185a90c98953cacc191cfc246f5d582c *tests/testthat/test-age_depth_model.R
 0d2408f68b119ac434b853523fbe52dc *tests/testthat/test-data_eval.R
 03f5c97063e3982654c75287f0cedcb4 *tests/testthat/test-ggstrat-plot_addons.R
 5bd06a131fa7b47d7aed3635b97a1022 *tests/testthat/test-ggstrat.R
