@@ -5,8 +5,8 @@
 
 <!-- badges: start -->
 
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/paleolimbot/tidypaleo/master.svg)](https://codecov.io/github/paleolimbot/tidypaleo?branch=master)
+[![Codecov test
+coverage](https://codecov.io/gh/paleolimbot/tidypaleo/graph/badge.svg)](https://app.codecov.io/gh/paleolimbot/tidypaleo)
 [![R-CMD-check](https://github.com/paleolimbot/tidypaleo/workflows/R-CMD-check/badge.svg)](https://github.com/paleolimbot/tidypaleo/actions)
 <!-- badges: end -->
 

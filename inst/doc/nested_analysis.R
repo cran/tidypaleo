@@ -13,9 +13,9 @@ knitr::opts_chunk$set(
   dpi = 150
 )
 
-## ---- eval=FALSE--------------------------------------------------------------
-#  library(tidyverse)
-#  library(tidypaleo)
+## ----eval=FALSE---------------------------------------------------------------
+# library(tidyverse)
+# library(tidypaleo)
 
 ## -----------------------------------------------------------------------------
 alta_lake_geochem

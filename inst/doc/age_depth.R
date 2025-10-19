@@ -23,16 +23,16 @@ plot(alta_lake_adm)
 ## -----------------------------------------------------------------------------
 predict(alta_lake_adm, depth = seq(-1, 10, 0.5))
 
-## ---- eval = FALSE------------------------------------------------------------
-#  age_depth_model(
-#    ...,
-#    interpolate_age = age_depth_interpolate,
-#    extrapolate_age_below = ~age_depth_extrapolate(.x, .y, x0 = last, y0 = last),
-#    extrapolate_age_above = ~age_depth_extrapolate(.x, .y, x0 = first, y0 = first),
-#    interpolate_age_limits = trans_exact,
-#    extrapolate_age_limits_below = trans_na,
-#    extrapolate_age_limits_above = trans_na
-#  )
+## ----eval = FALSE-------------------------------------------------------------
+# age_depth_model(
+#   ...,
+#   interpolate_age = age_depth_interpolate,
+#   extrapolate_age_below = ~age_depth_extrapolate(.x, .y, x0 = last, y0 = last),
+#   extrapolate_age_above = ~age_depth_extrapolate(.x, .y, x0 = first, y0 = first),
+#   interpolate_age_limits = trans_exact,
+#   extrapolate_age_limits_below = trans_na,
+#   extrapolate_age_limits_above = trans_na
+# )
 
 ## -----------------------------------------------------------------------------
 alta_lake_adm2 <- age_depth_model(

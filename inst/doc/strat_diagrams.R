@@ -14,10 +14,10 @@ knitr::opts_chunk$set(
   dpi = 96
 )
 
-## ---- eval=FALSE--------------------------------------------------------------
-#  library(tidyverse)
-#  library(tidypaleo)
-#  theme_set(theme_paleo(8))
+## ----eval=FALSE---------------------------------------------------------------
+# library(tidyverse)
+# library(tidypaleo)
+# theme_set(theme_paleo(8))
 
 ## -----------------------------------------------------------------------------
 data("long_lake_plottable")
@@ -64,17 +64,17 @@ alta_plot +
     inherit.aes = FALSE
   )
 
-## ---- warning=FALSE-----------------------------------------------------------
+## ----warning=FALSE------------------------------------------------------------
 alta_plot + 
   geom_errorbarh(aes(xmin = value - stdev, xmax = value + stdev), height = 0.5)
 
-## ---- eval=FALSE--------------------------------------------------------------
-#  alta_lake_geochem %>%
-#    mutate(param = fct_relevel(param, "Ti", "Cu", "C/N")) %>%
-#    ggplot(aes(x = value, y = depth)) +
-#    ...
+## ----eval=FALSE---------------------------------------------------------------
+# alta_lake_geochem %>%
+#   mutate(param = fct_relevel(param, "Ti", "Cu", "C/N")) %>%
+#   ggplot(aes(x = value, y = depth)) +
+#   ...
 
-## ---- echo=FALSE--------------------------------------------------------------
+## ----echo=FALSE---------------------------------------------------------------
 alta_lake_geochem %>%
   mutate(param = fct_relevel(param, "Ti", "Cu", "C/N")) %>%
   ggplot(aes(x = value, y = depth)) +
@@ -84,13 +84,13 @@ alta_lake_geochem %>%
   facet_geochem_gridh(vars(param)) +
   labs(x = NULL, y = "Depth (cm)")
 
-## ---- eval=FALSE--------------------------------------------------------------
-#  alta_lake_geochem %>%
-#    filter(param %in% c("d15N", "d13C", "C/N")) %>%
-#    ggplot(aes(x = value, y = depth)) +
-#    ...
+## ----eval=FALSE---------------------------------------------------------------
+# alta_lake_geochem %>%
+#   filter(param %in% c("d15N", "d13C", "C/N")) %>%
+#   ggplot(aes(x = value, y = depth)) +
+#   ...
 
-## ---- echo=FALSE--------------------------------------------------------------
+## ----echo=FALSE---------------------------------------------------------------
 alta_lake_geochem %>%
   filter(param %in% c("d15N", "d13C", "C/N")) %>%
   ggplot(aes(x = value, y = depth)) +
@@ -100,7 +100,7 @@ alta_lake_geochem %>%
   facet_geochem_gridh(vars(param)) +
   labs(x = NULL, y = "Depth (cm)")
 
-## ---- message=FALSE-----------------------------------------------------------
+## ----message=FALSE------------------------------------------------------------
 alta_adm <- age_depth_model(
   alta_lake_bacon_ages, 
   depth = depth_cm,
@@ -125,7 +125,7 @@ alta_plot +
 combined_data <- bind_rows(long_lake_plottable, alta_lake_geochem)
 combined_data
 
-## ---- fig.height=6------------------------------------------------------------
+## ----fig.height=6-------------------------------------------------------------
 ggplot(combined_data, aes(x = value, y = depth)) +
   geom_lineh() +
   geom_point() +
@@ -133,7 +133,7 @@ ggplot(combined_data, aes(x = value, y = depth)) +
   facet_geochem_gridh(vars(param), grouping = vars(location), scales = "free") +
   labs(x = NULL, y = "Depth (cm)")
 
-## ---- fig.height=6------------------------------------------------------------
+## ----fig.height=6-------------------------------------------------------------
 alta_plot_1 <- combined_data %>% 
   filter(location == "ALGC2") %>% 
   ggplot(aes(x = value, y = depth)) +
@@ -168,7 +168,7 @@ alta_plot +
 alta_plot + 
   facet_geochem_wraph(vars(param), rotate_axis_labels = 0, ncol = 4)
 
-## ---- fig.width=3, fig.height=5-----------------------------------------------
+## ----fig.width=3, fig.height=5------------------------------------------------
 ggplot(alta_lake_geochem, aes(x = age, y = value)) +
   geom_line() +
   geom_point() +
@@ -180,7 +180,7 @@ ggplot(alta_lake_geochem, aes(x = age, y = value)) +
 data("keji_lakes_plottable")
 keji_lakes_plottable
 
-## ---- fig.height=6------------------------------------------------------------
+## ----fig.height=6-------------------------------------------------------------
 keji_plot <- ggplot(keji_lakes_plottable, aes(x = rel_abund, y = depth)) +
   geom_col_segsh() +
   scale_y_reverse() +
@@ -189,14 +189,14 @@ keji_plot <- ggplot(keji_lakes_plottable, aes(x = rel_abund, y = depth)) +
 
 keji_plot
 
-## ---- fig.height=6------------------------------------------------------------
+## ----fig.height=6-------------------------------------------------------------
 ggplot(keji_lakes_plottable, aes(x = rel_abund, y = depth)) +
   geom_areah() +
   scale_y_reverse() +
   facet_abundanceh(vars(taxon), grouping = vars(location)) +
   labs(x = "Relative abundance (%)", y = "Depth (cm)")
 
-## ---- fig.height=6------------------------------------------------------------
+## ----fig.height=6-------------------------------------------------------------
 ggplot(keji_lakes_plottable, aes(x = rel_abund, y = depth)) +
   geom_col_segsh() + 
   geom_lineh() +
@@ -204,11 +204,11 @@ ggplot(keji_lakes_plottable, aes(x = rel_abund, y = depth)) +
   facet_abundanceh(vars(taxon), grouping = vars(location)) +
   labs(x = "Relative abundance (%)", y = "Depth (cm)")
 
-## ---- fig.height=6------------------------------------------------------------
+## ----fig.height=6-------------------------------------------------------------
 keji_plot +
   geom_lineh_exaggerate(exaggerate_x = 5, col = "grey70", lty = 2)
 
-## ---- fig.height=6------------------------------------------------------------
+## ----fig.height=6-------------------------------------------------------------
 keji_pca_scores <- keji_lakes_plottable %>%
   group_by(location) %>%
   nested_data(qualifiers = depth, key = taxon, value = rel_abund, trans = sqrt) %>%
@@ -235,7 +235,7 @@ wrap_plots(
   widths = c(4, 1)
 )
 
-## ---- fig.height=6------------------------------------------------------------
+## ----fig.height=6-------------------------------------------------------------
 keji_coniss <- keji_lakes_plottable %>%
   group_by(location) %>%
   nested_data(qualifiers = depth, key = taxon, value = rel_abund) %>%
@@ -255,7 +255,7 @@ wrap_plots(
   widths = c(2, 1)
 )
 
-## ---- fig.height=6------------------------------------------------------------
+## ----fig.height=6-------------------------------------------------------------
 # method 2: create a standalone plot for CONISS
 coniss_plot <- ggplot() +
   layer_dendrogram(keji_coniss, aes(y = depth)) +
@@ -285,13 +285,13 @@ halifax_plot <- ggplot(halifax_lakes_plottable, aes(x = rel_abund, y = location,
 
 halifax_plot
 
-## ---- eval=FALSE--------------------------------------------------------------
-#  halifax_lakes_plottable %>%
-#    mutate(location = fct_relevel(location, "Bell Lake", "Bayers", "Little Springfield") %>% fct_rev()) %>%
-#    ggplot(aes(x = rel_abund, y = location, fill = sample_type)) +
-#    ...
+## ----eval=FALSE---------------------------------------------------------------
+# halifax_lakes_plottable %>%
+#   mutate(location = fct_relevel(location, "Bell Lake", "Bayers", "Little Springfield") %>% fct_rev()) %>%
+#   ggplot(aes(x = rel_abund, y = location, fill = sample_type)) +
+#   ...
 
-## ---- echo=FALSE--------------------------------------------------------------
+## ----echo=FALSE---------------------------------------------------------------
 halifax_lakes_plottable %>%
   mutate(location = fct_relevel(location, "Bell Lake", "Bayers", "Little Springfield") %>% fct_rev()) %>%
   ggplot(aes(x = rel_abund, y = location, fill = sample_type)) +
